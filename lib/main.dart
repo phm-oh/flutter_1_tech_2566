@@ -201,6 +201,61 @@ import 'package:flutter/material.dart';
 
 //----------------------------------------------------- Floating Action button
 
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Phanumet',
+//       theme: ThemeData(primarySwatch: Colors.green),
+//       home: const CouterArea(),
+//     );
+//   }
+// }
+
+// class CouterArea extends StatefulWidget {
+//   const CouterArea({super.key});
+
+//   @override
+//   State<CouterArea> createState() => _CouterAreaState();
+// }
+
+// class _CouterAreaState extends State<CouterArea> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Counter'),
+//       ),
+//       body: const Center(
+//           child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Text(
+//             'กดปุ๋มถ้าต้องการเพิ่มตัวนับ',
+//           ),
+//           Text('0',
+//               style: TextStyle(
+//                 fontSize: 60,
+//                 color: Colors.blue,
+//               )),
+//         ],
+//       )),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {},
+//         child: const Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
+
+//---------------แทรกค่าตัวแปร ใน Text widget
+
 void main() {
   runApp(const MyApp());
 }
@@ -226,21 +281,23 @@ class CouterArea extends StatefulWidget {
 }
 
 class _CouterAreaState extends State<CouterArea> {
+  int _couter = 0; // เพิ่ม
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Counter'),
       ),
-      body: const Center(
+      body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'กดปุ๋มถ้าต้องการเพิ่มตัวนับ',
           ),
-          Text('0',
-              style: TextStyle(
+          Text(_couter.toString(), //-----------หรือใช้ '$_counter'
+              style: const TextStyle(
                 fontSize: 60,
                 color: Colors.blue,
               )),
@@ -253,3 +310,7 @@ class _CouterAreaState extends State<CouterArea> {
     );
   }
 }
+
+
+
+///-------------------------------------------------
