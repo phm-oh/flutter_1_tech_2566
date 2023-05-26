@@ -317,6 +317,66 @@ import 'package:flutter/material.dart';
 
 ///-------------------------------------------setState
 
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Phanumet',
+//       theme: ThemeData(primarySwatch: Colors.green),
+//       home: const CouterArea(),
+//     );
+//   }
+// }
+
+// class CouterArea extends StatefulWidget {
+//   const CouterArea({super.key});
+
+//   @override
+//   State<CouterArea> createState() => _CouterAreaState();
+// }
+
+// class _CouterAreaState extends State<CouterArea> {
+//   int _couter = 0; // เพิ่ม
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Counter'),
+//       ),
+//       body: Center(
+//           child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           const Text(
+//             'กดปุ๋มถ้าต้องการเพิ่มตัวนับ',
+//           ),
+//           Text('$_couter', //-----------หรือใช้  _couter.toString()
+//               style: const TextStyle(
+//                 fontSize: 60,
+//                 color: Colors.blue,
+//               )),
+//         ],
+//       )),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {
+//           setState(() {
+//             _couter = _couter + 1;
+//           });
+//         },
+//         child: const Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
+
+//--------------------------------------------------- function แยก
 void main() {
   runApp(const MyApp());
 }
@@ -366,8 +426,6 @@ class _CouterAreaState extends State<CouterArea> {
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // print('button presses.');
-
           setState(() {
             _couter = _couter + 1;
           });
